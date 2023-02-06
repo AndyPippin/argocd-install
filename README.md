@@ -1,4 +1,7 @@
-# README #
+# Installing ArgoCD with Helm
+
+see: [Setting up ArgoCD with Helm](https://www.arthurkoziel.com/setting-up-argocd-with-helm/)
+
 
 This README would normally document whatever steps are necessary to get your application up and running.
 

@@ -4,6 +4,45 @@ argo-cd:
   server:
     extraArgs:
       - --insecure
+
+    ingress:
+      enabled: true
+      annotations: {}
+      labels: {}
+      ingressClassName: ""
+
+      # -- List of ingress hosts
+      hosts:
+        - argocd.ajpippin.us
+
+      # -- List of ingress paths
+      paths:
+        - /
+
+      # -- Ingress path type. One of `Exact`, `Prefix` or `ImplementationSpecific`
+      pathType: Prefix
+      # -- Additional ingress paths
+      extraPaths: []
+        # - path: /*
+        #   pathType: Prefix
+        #   backend:
+        #     service:
+        #       name: ssl-redirect
+        #       port:
+        #         name: use-annotation
+
+      # -- Ingress TLS configuration
+      tls: []
+        # - secretName: your-certificate-name
+        #   hosts:
+        #     - argocd.ajpippin.us
+
+      # -- Uses `server.service.servicePortHttps` instead `server.service.servicePortHttp`
+      https: false
+
+
+
+
     config:
       repositories: |
         - type: helm

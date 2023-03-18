@@ -15,7 +15,8 @@ Get the admin password:
 
 ## Install
 
+```
 cd .../ArgoCD/Install
 helm dep update ./argo-cd
 helm upgrade --install argocd --namespace argocd-system --create-namespace ./argo-cd
-
+```
